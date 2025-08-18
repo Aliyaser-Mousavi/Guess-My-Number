@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  color: #eee;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  position: relative;
+  height: auto;
+  min-height: 30vh;
+  border-bottom: 5px solid #eee;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-top: 2rem;
+  padding-bottom: 50px;
+}
+
+.number {
+  background: #eee;
+  color: #333;
+  font-size: clamp(3rem, 8vw, 6rem);
+  width: clamp(8rem, 20vw, 15rem);
+  padding: 2rem 0;
+  text-align: center;
+  border-radius: 1rem;
+  display: inline-block;
+  margin: 1rem auto;
+}
+
+.between {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.again {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.left,
+.right {
+  flex: 1 1 300px;
+  max-width: 450px;
+  text-align: center;
+}
+
+.guess {
+  background: none;
+  border: 3px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: clamp(2rem, 6vw, 5rem);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 25rem;
+  text-align: center;
+  margin: 2rem auto;
+  border-radius: 8px;
+}
+
+.btn {
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-family: inherit;
+  padding: 1.2rem 2.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.message {
+  margin: 2rem 0;
+  min-height: 3rem;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+.label-score,
+.label-highscore {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-bottom: 4rem;
+  }
+
+  .between,
+  .again {
+    position: static;
+    display: block;
+    margin: 0.5rem auto;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
